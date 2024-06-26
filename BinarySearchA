@@ -1,0 +1,29 @@
+public class BinarySearchA
+{
+    public static int linearSearch(int number[],int key)
+    {
+        for(int i=0;i<number.length;i++)
+        {
+            if(number[i]==key)
+            {
+                return i;
+
+            }
+        }
+        return -1;
+    }
+    public static void main(String args[])
+    {
+        int numbers[]={2,3,44,5,10,6,89,67,7};
+        int key=10;
+        int index=linearSearch(number,key);
+        if(index==-1)
+        {
+            System.out.println("NOT found");
+        }
+        else{
+        System.out.println("key is at index :"+index);
+        }
+
+    }
+}
