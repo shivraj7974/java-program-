@@ -1,0 +1,52 @@
+class Main{
+    public static void main(String args[])
+    {
+        int num = 20002, rev=0,rem , temp;
+        temp = num ;
+        while(temp!=0){
+            rem=temp%10;
+            rev= rev*10+rem;
+            temp/=10;
+        }
+        if(num==rev)
+        {
+            System.out.println("yes");
+        }
+        else{
+            System.out.println("noooooooo");
+        }
+        }
+}
+
+// armstrong number program .......................................................
+
+import java.util.Scanner;
+class Main{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter a number");
+        int num = sc.nextInt();
+        sc.close();
+        
+        int originalNum = num , sum=0, digit, count =0, temp=num;
+        while(temp> 0)
+        {
+            count ++;
+            temp/=10;
+        }
+        temp = num;
+        while(temp > 0){
+            digit = temp % 10 ;
+            sum += Math.pow(digit, count);
+            temp /= 10;
+        }
+        
+        if(sum == originalNum){
+            System.out.println("armstrong no");
+        }
+        else{
+            System.out.println("not a armstrong no ");
+        }
+    }
+}
