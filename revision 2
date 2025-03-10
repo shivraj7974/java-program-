@@ -1,0 +1,36 @@
+// fibonnacciii series 
+class Main{
+    public static void main(String args[])
+    {
+        int num =15;
+        int a =0, b=1 ;
+        System.out.print(a+" "+b+" ");
+        for(int i =2 ; i< num ; i++)
+        {
+            int next = a+b;
+            System.out.print(next +" ");
+            a=b;
+            b=next;
+            
+        }
+    }
+}
+
+//factorial of a number ---------------------------
+
+class Main
+{
+    static int fact(int num)
+    {
+        int res =1;
+        for(int i =2; i<=num; i++)
+        res *= i;
+        return res;
+    }
+    
+    public static void main(String args[])
+    {
+        int num = 5;
+        System.out.println(fact(num));
+    }
+}
