@@ -1,0 +1,43 @@
+// strong number - -145
+
+import java.util.Scanner;
+class Main{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if(isStrong(n))
+        {
+            System.out.println("hai ");
+        }
+        else{
+            System.out.println("nahi h");
+        }
+     
+        
+    }
+    
+       public static int facto (int n)
+       {
+           int fact =1;
+           for(int i =1 ; i<=n; i++)
+           {
+               fact=fact*i;
+           }
+           return fact;
+           
+       }
+       static boolean isStrong(int n )
+       {
+           int digit,sum=0;
+           int temp = n;
+           while(temp!=0)
+           {
+               digit = temp%10;
+               sum = sum + facto(digit);
+               temp /= 10 ;
+               
+           }
+           return sum == n;
+       }
+}
